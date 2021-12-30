@@ -10,8 +10,6 @@ form.addEventListener("submit", (event) => {
     console.log(formData);
     console.log(name);
 
-    https://api.giphy.com/v1/gifs/search?api_key=nD60pUVFXQt0rkotJYYIZxhUVCxdw6jx&q=
-
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         .then((response) => {
             if (!response.ok) throw new Error(response.status);
