@@ -32,7 +32,7 @@ form.addEventListener("submit", (event) => {
 
             output.appendChild(title);
             output.appendChild(pic);
-            output.appendChild(specialAbility)
+            // output.appendChild(specialAbility)
         })
 
         .catch((error) => {
@@ -50,11 +50,12 @@ form.addEventListener("submit", (event) => {
             return response.json();
         })
         .then((pokemonData) => {
-            console.log(pokemonData.name);
+            console.log(pokemonData);
             const gif = document.createElement("img");
             // const specialAbility = document.createElement("div")
+            const random=Math.ceil(Math.random()*50)
             gif.src =
-                data.url
+            pokemonData.data[random].images.downsized.url
             gif.alt = "";
             console.log(
             );
