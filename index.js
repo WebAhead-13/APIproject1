@@ -1,14 +1,25 @@
 const form = document.querySelector("form");
 const output = document.querySelector("output");
+const stats=document.querySelector("stats");
+const changeButton = document.querySelector(".changeButton");
+var random=1;
+var pokiName=" "
+
+
+
+changeButton.addEventListener("click" ,  (event)=>{
+    random=Math.ceil(Math.random()*50);
+    searchGif(pokiName)
+})
 
 form.addEventListener("submit", (event) => {
     output.innerHTML = "";
     event.preventDefault();
     const formData = new FormData(event.target);
     const name = formData.get("pokemon");
-
     console.log(formData);
     console.log(name);
+    pokiName=name;
 
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
         .then((response) => {
@@ -16,23 +27,21 @@ form.addEventListener("submit", (event) => {
             return response.json();
         })
         .then((pokemonData) => {
-            console.log(pokemonData.name);
+            console.log(pokemonData);
             const title = document.createElement("h2");
             title.textContent = pokemonData.name;
-            const pic = document.createElement("img");
-            pic.src =
-                pokemonData.sprites.versions["generation-v"][
-                    "black-white"
-                ].animated["front_default"];
-            pic.alt = "";
-            console.log(
-                pokemonData.sprites.versions["generation-v"]["black-white"]
-                    .animated["front_default"]
-            );
-
             output.appendChild(title);
-            output.appendChild(pic);
-            // output.appendChild(specialAbility)
+            const statsArr =pokemonData.stats;
+            console.log(statsArr)
+            for(let i=0;i<6;i++) {
+                let discr1=document.createElement("h2")
+                discr1.textContent="stat name : " +statsArr[i].stat.name;
+                let discr2=document.createElement("div")
+                discr2.textContent="stat level : "+statsArr[i].base_stat;
+                stats.appendChild(discr1)
+                stats.appendChild(discr2)
+            }
+    
         })
 
         .catch((error) => {
@@ -42,8 +51,14 @@ form.addEventListener("submit", (event) => {
             } else {
                 output.textContent = "⚠️ Something went wrong";
             }
+
+            
         });
 
+         searchGif (name) 
+    });
+
+    function searchGif (name) {
     fetch(`https://api.giphy.com/v1/gifs/search?api_key=nD60pUVFXQt0rkotJYYIZxhUVCxdw6jx&q=${name}`)
         .then((response) => {
             if (!response.ok) throw new Error(response.status);
@@ -52,8 +67,10 @@ form.addEventListener("submit", (event) => {
         .then((pokemonData) => {
             console.log(pokemonData);
             const gif = document.createElement("img");
+            gif.width=400;
+            gif.height=400;
             // const specialAbility = document.createElement("div")
-            const random=Math.ceil(Math.random()*50)
+            // const random=Math.ceil(Math.random()*50)
             gif.src =
             pokemonData.data[random].images.downsized.url
             gif.alt = "";
@@ -71,4 +88,4 @@ form.addEventListener("submit", (event) => {
                 output.textContent = "⚠️ Something went wrong";
             }
         });
-});
+    }
