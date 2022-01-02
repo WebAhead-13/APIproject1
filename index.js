@@ -3,10 +3,10 @@ const output = document.querySelector("output");
 const stats=document.querySelector("stats");
 const nameH=document.querySelector("nameH");
 const changeButton = document.querySelector(".changeButton");
+const card = document.querySelector(".card")
 var random=1;
 var pokiName=" "
 var status_flag=0;
-
 
 
 
@@ -17,6 +17,7 @@ changeButton.addEventListener("click" ,  (event)=>{
 })
 
 form.addEventListener("submit", (event) => {
+    card.style.visibility= "visible";
     output.innerHTML = "";
     stats.innerHTML=" ";
     nameH.innerHTML= "";
@@ -41,12 +42,22 @@ form.addEventListener("submit", (event) => {
             const statsArr =pokemonData.stats;
             console.log(statsArr)
             for(let i=0;i<6;i++) {
+                let icon =document.createElement("img")
+                icon.src = 'icon'+i+'.png'
+                icon.width = 40
+                console.log(icon.src)
+                let stat =document.createElement("div")
                 let discr1=document.createElement("h2")
-                discr1.textContent="stat name : " +statsArr[i].stat.name;
-                let discr2=document.createElement("div")
-                discr2.textContent="stat level : "+statsArr[i].base_stat;
+                discr1.innerHTML=statsArr[i].stat.name + " : " + statsArr[i].base_stat;
+                // let discr2=document.createElement("div")
+                // discr2.textContent=statsArr[i].base_stat;
+                discr1.classList.add("h2"+ i)
+                // discr2.classList.add("h2"+ i)
+                // stats.appendChild(icon)
+                discr1.appendChild(icon)
                 stats.appendChild(discr1)
-                stats.appendChild(discr2)
+                
+                // stats.appendChild(discr2)
             }
             searchGif (name)    
         })
