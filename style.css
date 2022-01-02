@@ -1,1 +1,10 @@
-
+.card {
+  display: inline-block;
+  width: 420px;
+  padding: 1em;
+  border-radius: 15px;
+  margin: 10px;
+  background: #ddd;
+  text-align: left;
+  visibility: collapse;
+}
