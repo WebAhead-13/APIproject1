@@ -3,6 +3,7 @@ const output = document.querySelector("output");
 const stats=document.querySelector("stats");
 const nameH=document.querySelector("nameH");
 const changeButton = document.querySelector(".changeButton");
+const card = document.querySelector(".card")
 var random=1;
 var pokiName=" "
 var status_flag=0;
@@ -17,6 +18,7 @@ changeButton.addEventListener("click" ,  (event)=>{
 })
 
 form.addEventListener("submit", (event) => {
+    card.style.visibility= "visible";
     output.innerHTML = "";
     stats.innerHTML=" ";
     nameH.innerHTML= "";
