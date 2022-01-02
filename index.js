@@ -1,7 +1,7 @@
 const form = document.querySelector("form");
 const output = document.querySelector("output");
 const stats=document.querySelector("stats");
-const nameH = document.querySelector("nameH");
+const nameH=document.querySelector("nameH");
 const changeButton = document.querySelector(".changeButton");
 var random=1;
 var pokiName=" "
@@ -18,8 +18,8 @@ changeButton.addEventListener("click" ,  (event)=>{
 
 form.addEventListener("submit", (event) => {
     output.innerHTML = "";
-    stats.innerHTML="";
-    nameH.innerHTML="";
+    stats.innerHTML=" ";
+    nameH.innerHTML= "";
     event.preventDefault();
     const formData = new FormData(event.target);
     const name = formData.get("pokemon");
