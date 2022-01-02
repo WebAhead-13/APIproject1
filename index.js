@@ -44,7 +44,7 @@ form.addEventListener("submit", (event) => {
             for(let i=0;i<6;i++) {
                 let icon =document.createElement("img")
                 icon.src = 'icon'+i+'.png'
-                icon.width = 25
+                icon.width = 40
                 console.log(icon.src)
                 let stat =document.createElement("div")
                 let discr1=document.createElement("h2")
