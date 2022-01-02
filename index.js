@@ -1,19 +1,25 @@
 const form = document.querySelector("form");
 const output = document.querySelector("output");
 const stats=document.querySelector("stats");
+const nameH=document.querySelector("nameH");
 const changeButton = document.querySelector(".changeButton");
 var random=1;
 var pokiName=" "
+var status_flag=0;
+
 
 
 
 changeButton.addEventListener("click" ,  (event)=>{
     random=Math.ceil(Math.random()*50);
+    if(status_flag)
     searchGif(pokiName)
 })
 
 form.addEventListener("submit", (event) => {
     output.innerHTML = "";
+    stats.innerHTML=" ";
+    nameH.innerHTML= "";
     event.preventDefault();
     const formData = new FormData(event.target);
     const name = formData.get("pokemon");
@@ -27,10 +33,11 @@ form.addEventListener("submit", (event) => {
             return response.json();
         })
         .then((pokemonData) => {
+            status_flag=1;
             console.log(pokemonData);
             const title = document.createElement("h2");
             title.textContent = pokemonData.name;
-            output.appendChild(title);
+            nameH.appendChild(title);
             const statsArr =pokemonData.stats;
             console.log(statsArr)
             for(let i=0;i<6;i++) {
@@ -41,10 +48,12 @@ form.addEventListener("submit", (event) => {
                 stats.appendChild(discr1)
                 stats.appendChild(discr2)
             }
-    
+            searchGif (name)    
         })
+        
 
         .catch((error) => {
+            status_flag=0;
             console.log(error);
             if (error.message === "404") {
                 output.textContent = `⚠️ Couldn't find "${name}"`;
@@ -55,7 +64,7 @@ form.addEventListener("submit", (event) => {
             
         });
 
-         searchGif (name) 
+          
     });
 
     function searchGif (name) {
