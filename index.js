@@ -1,6 +1,7 @@
 const form = document.querySelector("form");
 const output = document.querySelector("output");
 const stats=document.querySelector("stats");
+const nameH = document.querySelector("nameH");
 const changeButton = document.querySelector(".changeButton");
 var random=1;
 var pokiName=" "
@@ -17,6 +18,8 @@ changeButton.addEventListener("click" ,  (event)=>{
 
 form.addEventListener("submit", (event) => {
     output.innerHTML = "";
+    stats.innerHTML="";
+    nameH.innerHTML="";
     event.preventDefault();
     const formData = new FormData(event.target);
     const name = formData.get("pokemon");
@@ -34,7 +37,7 @@ form.addEventListener("submit", (event) => {
             console.log(pokemonData);
             const title = document.createElement("h2");
             title.textContent = pokemonData.name;
-            output.appendChild(title);
+            nameH.appendChild(title);
             const statsArr =pokemonData.stats;
             console.log(statsArr)
             for(let i=0;i<6;i++) {
