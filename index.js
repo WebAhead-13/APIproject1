@@ -44,9 +44,11 @@ form.addEventListener("submit", (event) => {
             console.log(statsArr)
             for(let i=0;i<6;i++) {
                 let discr1=document.createElement("h2")
-                discr1.textContent="stat name : " +statsArr[i].stat.name;
+                discr1.textContent=statsArr[i].stat.name;
                 let discr2=document.createElement("div")
-                discr2.textContent="stat level : "+statsArr[i].base_stat;
+                discr2.textContent=statsArr[i].base_stat;
+                discr1.classList.add("h2"+ i)
+                discr2.classList.add("h2"+ i)
                 stats.appendChild(discr1)
                 stats.appendChild(discr2)
             }
