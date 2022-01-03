@@ -14,10 +14,6 @@ clear.addEventListener("click" ,() => {
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    // currentCard.style.visibility= "visible";
-    // output.innerHTML = "";
-    // stats.innerHTML=" ";
-    // nameH.innerHTML= "";
     const formData = new FormData(event.target);
     const name = formData.get("pokemon");
     console.log(formData);
@@ -51,18 +47,13 @@ form.addEventListener("submit", (event) => {
                 icon.width = 40
         
                 discr1.innerHTML=statsArr[i].stat.name + " : " + statsArr[i].base_stat;
-                // let discr2=document.createElement("div")
-                // discr2.textContent=statsArr[i].base_stat;
                 discr1.classList.add("h2"+ i)
                 discr1.appendChild(icon)
-                // discr2.classList.add("h2"+ i)
-                // stats.appendChild(icon)
-
                 card.appendChild(discr1)
             }   
         
             searchGif (name,card)
-            
+
             changeButton= document.createElement("button")
             changeButton.innerHTML="get another giphy"
             changeButton.addEventListener("click" ,  (event)=>{
@@ -102,8 +93,6 @@ form.addEventListener("submit", (event) => {
             const gif = document.createElement("img");
             gif.width=400;
             gif.height=400;
-            // const specialAbility = document.createElement("div")
-            // const random=Math.ceil(Math.random()*50)
             gif.src =
             pokemonData.data[random].images.downsized.url
             gif.alt = "";
