@@ -6,7 +6,54 @@ var random=1;
 var pokiName=" "
 var status_flag=0;
 
+// form.addEventListener("add", (event)=>{
+//     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+// .then((response) => {
+//     if (!response.ok) throw new Error(response.status);
+//     return response.json();
+// })
+// .then((pokemonData) => {
+//     status_flag=1;
+//     console.log(pokemonData);
+//     title = document.createElement("h2");
+//     title.textContent = pokemonData.name;
+//     nameH.appendChild(title);
+//     statsArr =pokemonData.stats;
+//     console.log(statsArr)
+//     for(let i=0;i<6;i++) {
+//         let icon =document.createElement("img")
+//         icon.src = 'icon'+i+'.png'
+//         icon.width = 40
+//         console.log(icon.src)
+//         let stat =document.createElement("div")
+//         let discr1=document.createElement("h2")
+//         discr1.innerHTML=statsArr[i].stat.name + " : " + statsArr[i].base_stat;
+//         // let discr2=document.createElement("div")
+//         // discr2.textContent=statsArr[i].base_stat;
+//         discr1.classList.add("h2"+ i)
+//         // discr2.classList.add("h2"+ i)
+//         // stats.appendChild(icon)
+//         discr1.appendChild(icon)
+//         stats.appendChild(discr1)
+        
+//         // stats.appendChild(discr2)
+//     }
+//     searchGif (name)    
+// })
+// .catch((error) => {
+//     status_flag=0;
+//     console.log(error);
+//     if (error.message === "404") {
+//         output.textContent = `⚠️ Couldn't find "${name}"`;
+//         changeButton.style.display = "none";
+//     } else {
+//         output.textContent = "⚠️ Something went wrong";
+//     }
 
+// })
+
+  
+// });
 
 clear.addEventListener("click" ,() => {
     cards.innerHTML= " ";
@@ -64,13 +111,12 @@ form.addEventListener("submit", (event) => {
             cards.appendChild(card)   
           
         })
-        
-
         .catch((error) => {
             status_flag=0;
             console.log(error);
             if (error.message === "404") {
                 output.textContent = `⚠️ Couldn't find "${name}"`;
+                changeButton.style.visibility = "none";
             } else {
                 output.textContent = "⚠️ Something went wrong";
             }
