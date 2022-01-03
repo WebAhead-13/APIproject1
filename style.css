@@ -1,111 +1,122 @@
 .card {
-    display: inline-block;
-    text-transform: capitalize;
-    width: 420px;
-    padding: 1em;
-    border-radius: 15px;
-    margin: 10px;
-    background-image: url("https://www.enwallpaper.com/wp-content/uploads/2021/02/20c5eeb3386e71ae421d7b81fc6b69a5.jpg");
-    text-align: left;
-    /* visibility: collapse; */
-    color: whitesmoke;
-    opacity: 0.75;
-  }
-  .h20 {
-    text-transform: uppercase;
-    background: rgba(233, 126, 126, 0.1);
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
-    transition: all 0.2s;
-  }
-  .h21 {
-    background: rgba(233, 126, 126, 0.1);
-    /* opacity: 0.7; */
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
-    transition: all 0.2s;
-  }
-  
-  .h22 {
-    background: rgba(233, 126, 126, 0.1);
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
-    transition: all 0.2s;
-  }
-  
-  .h23 {
-    background: rgba(233, 126, 126, 0.1);
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
-    transition: all 0.2s;
-  }
-  .h24 {
-    background: rgba(233, 126, 126, 0.1);
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
-    transition: all 0.2s;
-  }
-  .h25 {
-    background: rgba(233, 126, 126, 0.1);
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 5px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
-    transition: all 0.2s;
-  }
-
-  .clear{
-    display: inline;
-  }
-  form {
-    display: inline;
-  }
-
-  cards {
-    display: flex;
-    justify-content:space-around;
-    flex-wrap: wrap;
-    row-gap: 40px;
-    /* column-gap: 20px; */
-
-
-  }
-  /* {
-      background: #fff;
-      padding: 25px;
-      margin-bottom: 25px;
-      border-radius: 5px;
-      overflow: hidden;
-      display: flex;
-      justify-content: space-between;
-      box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
-      transition: all 0.2s;
-      } */
+  display: inline-block;
+  text-transform: capitalize;
+  width: 420px;
+  padding: 1em;
+  border-radius: 15px;
+  margin: 10px;
+  background-image: url("https://www.enwallpaper.com/wp-content/uploads/2021/02/20c5eeb3386e71ae421d7b81fc6b69a5.jpg");
+  text-align: left;
+  /* visibility: collapse; */
+  color: whitesmoke;
+  opacity: 0.75;
+}
+.h20 {
+  text-transform: capitalize;
+  background: rgba(233, 126, 126, 0.1);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+}
+.h21 {
+  text-transform: capitalize;
+  background: rgba(233, 126, 126, 0.1);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+}
+.h22 {
+  text-transform: capitalize;
+  background: rgba(233, 126, 126, 0.1);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+}
+.h23 {
+  text-transform: capitalize;
+  background: rgba(233, 126, 126, 0.1);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+}
+.h24 {
+  text-transform: capitalize;
+  background: rgba(233, 126, 126, 0.1);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+}
+.h25 {
+  text-transform: capitalize;
+  background: rgba(233, 126, 126, 0.1);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+}
+body {
+  background-image: url("https://64.media.tumblr.com/f138f8b115da09c107722f0f4a7bbcf7/acc0f9160bf0de68-3f/s540x810/160d2fbc6173cd52a8806284e89e5deed46bdc66.gifv");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* height: 100vh; */
+  padding: 0;
+  margin: 0;
+}
+button {
+  background-color: #121212; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+label {
+  /* background-color: #121212; Green */
+  font-size: 20px;
+}
+.clear {
+  display: inline;
+}
+form {
+  display: inline;
+}
+cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}

@@ -9,6 +9,7 @@ var status_flag=0;
 
 clear.addEventListener("click" ,() => {
     cards.innerHTML= " ";
+    output.innerHTML= " ";
 })
 
 form.addEventListener("submit", (event) => {
